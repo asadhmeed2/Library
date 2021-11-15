@@ -1,13 +1,16 @@
+const { match } = require('assert');
 const mongoose = require('mongoose');
 
 const bookSchema = new mongoose.Schema({
     bookName: {
         type: String,
-        required: true
+        required: true,
+        match:/^([a-zA-Z])*$/
     },
     author: {
         type: String,
-        required: true
+        required: true,
+        match:/^([a-zA-Z])*$/
     },
     releaseYear: {
         type: Number,
@@ -18,6 +21,7 @@ const bookSchema = new mongoose.Schema({
         type: String,
         required: true,
         maxLength:2,
+        match:/^([a-zA-Z])*$/
     },
     reating:{
         type: Number,
