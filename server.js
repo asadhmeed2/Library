@@ -11,7 +11,7 @@ app.get('/', (req, res)=>{
 app.use('/api/books', require('./routes/books.route'));
 
 
-mongoose.connect(`mongodb+srv://asadhm:${process.env.MONGODB_PASSWORD}@cluster0.jdmn4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,{ useNewUrlParser: true });
+mongoose.connect(`mongodb+srv://asadhm:0147asad@cluster0.jdmn4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,{ useNewUrlParser: true });
 
 app.listen(process.env.PORT || 5000, () => {
     console.log('Server started on port 5000');

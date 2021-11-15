@@ -1,4 +1,3 @@
-const { throws } = require('assert');
 const bookModel = require('../modules/book.module');
 
 
@@ -12,7 +11,7 @@ const getAllBooks =  (req, res) => {
     });
 }
 const getBooksByYear =  (req, res) => {
-    bookModel.Book.find({year: req.params.year},(err, data)=>{
+    bookModel.Book.find({releaseYear: req.params.year},(err, data)=>{
         if (err) {
             res.status(404).send('error data not found');
             throw err;
