@@ -5,7 +5,9 @@ const mongoose = require('mongoose');
 
 bodyParser.urlencoded({ extended: false });
 app.use(bodyParser.json());
-
+app.get('/', (req, res)=>{
+    res.send('<h1>asad</h1>')
+})
 app.use('/api/books', require('./routes/books.route'));
 
 
